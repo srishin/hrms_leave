@@ -1,0 +1,16 @@
+{
+    "env": "development",
+    "appSecret":"appSecretKeyHere",
+    "database":
+    {
+        "development":
+        {
+            "database": "leave",
+            "username": "root",
+            "password": "root",
+            "dialect": "mysql",
+            "host": "127.0.0.1",
+            "logging":false
+        }
+    }
+}
