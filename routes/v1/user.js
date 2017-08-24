@@ -25,7 +25,7 @@
 
  router.get('/', (req, res) => {
      let promise = models.users.findAll({
-         attributes: ['id',  'email']
+         attributes: ['id',  'email','firstName','lastName']
      });
      promise.then((userList) => {
          if (!userList.length) {
