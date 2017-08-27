@@ -62,7 +62,7 @@ models.sequelize
         models.roles.upsert({ name: 'Administrator' })
             .then((adm) => console.log(adm))
             .catch((e) => console.log(e));
-        models.users.upsert({ id: 1, firstName: 'HRM', lastName: 'Manager', roleId: 1 })
+        models.users.upsert({ id: 1, firstName: 'HRM', lastName: 'Manager', roleId: 1,email:'hrms@localhost.com',password:'105754e634c32c03aa7fdce0573c3343' })
             .then((adm) => console.log(adm))
             .catch((e) => console.log(e));
     }).catch(function(error) {

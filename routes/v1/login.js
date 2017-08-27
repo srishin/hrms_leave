@@ -33,7 +33,6 @@ HTTP/1.1 404 Not Found
 }
  */
 router.post('/', (req, res) => {
-    console.log(md5(req.body.password))
     if (!req.body.password) {
         return res.status(422).send();
     }
