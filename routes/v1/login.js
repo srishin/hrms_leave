@@ -32,17 +32,17 @@ HTTP/1.1 404 Not Found
   "error": "Invalid credentails"
 }
  */
-
 router.post('/', (req, res) => {
+    console.log(md5(req.body.password))
     if (!req.body.password) {
         return res.status(422).send();
     }
-    let login = models.user.findOne({
+    let login = models.users.findOne({
         where: {
-            $or: [{ name: req.body.email }, { email: req.body.email }],
+            email: req.body.email,
             $and: { password: md5(req.body.password) }
         },
-        attributes: ['id', 'email', 'type'],
+        attributes: ['id', 'email'],
         raw: true
     });
 
